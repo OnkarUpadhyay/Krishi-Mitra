@@ -1,0 +1,17 @@
+streamlit
+langchain
+langchain-community
+langgraph
+langchain-core
+langchain_groq
+langchain_openai
+openai
+langchain-google-genai
+python-dotenv
+duckduckgo_search
+langchain-tavily
+langgraph-cli[inmem]
+playwright 
+easyocr 
+numpy
+ddgs

@@ -1,0 +1,7 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "krishi_mitra": "./src/graph.py:app"
+  },
+  "env": ".env"
+}
