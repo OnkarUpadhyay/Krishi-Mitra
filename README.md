@@ -1,25 +1,28 @@
 <div align="center">
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=38&pause=1000&color=2E8B57&center=true&vCenter=true&width=800&height=80&lines=🌾+Krishi-Mitra;Multi-Agent+Agricultural+System;Real-time+Farming+Advisories;Deterministic+State+Orchestration" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=40&pause=1000&color=006400&center=true&vCenter=true&width=800&height=80&lines=Welcome+to+🌾Krishi-Mitra;Multi-Agent+Agricultural+System;Real-time+Farming+Advisories;Deterministic+State+Orchestration" alt="Welcome to Krishi-Mitra!" />
 </a>
+
+<i>An advanced AI-driven hub-and-spoke multi-agent system delivering fault-tolerant agricultural intelligence.</i>
+
+<br>
+<br>
 
 <p align="center">
   <a href="https://python.org">
-    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-  </a>
-  <a href="https://langchain.com">
-    <img src="https://img.shields.io/badge/LangGraph-State_Orchestration-orange.svg?style=for-the-badge&logo=langchain&logoColor=white" alt="LangGraph">
-  </a>
-  <a href="https://groq.com">
-    <img src="https://img.shields.io/badge/Groq-gpt--oss--120b-green.svg?style=for-the-badge&logo=openai&logoColor=white" alt="Groq">
+    <img src="https://img.shields.io/badge/Python-3.10+-3776AB.svg?style=flat-square&logo=python&logoColor=white" alt="Python">
   </a>
   <a href="https://streamlit.io">
-    <img src="https://img.shields.io/badge/Streamlit-UI-red.svg?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit">
+    <img src="https://img.shields.io/badge/Streamlit-UI-FF4B4B.svg?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit">
+  </a>
+  <a href="https://langchain.com">
+    <img src="https://img.shields.io/badge/LangGraph-State_Orchestration-8A2BE2.svg?style=flat-square&logo=langchain&logoColor=white" alt="LangGraph">
+  </a>
+  <a href="https://groq.com">
+    <img src="https://img.shields.io/badge/Groq-gpt--oss--120b-228B22.svg?style=flat-square&logo=openai&logoColor=white" alt="Groq">
   </a>
 </p>
-
-<h3>An advanced AI-driven hub-and-spoke multi-agent system delivering fault-tolerant agricultural intelligence.</h3>
 
 </div>
 
@@ -200,6 +203,7 @@ Krishi_mitra/
 ├── main.py                       # CLI entry point / Main execution script
 ├── requirements.txt              # Project dependencies
 └── pyproject.toml                # Project dependencies and metadata
+```
 
 ---
 
