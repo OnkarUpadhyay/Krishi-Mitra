@@ -76,7 +76,7 @@ def invoke_with_groq_fallback(callable_factory):
 
 
 # ==========================================
-# 2. WORKER NODE FACTORY (v1.0 Standard)
+# 2. WORKER NODE FACTORY 
 # ==========================================
 
 def make_worker_node(agent_name: str, tools: list, system_prompt: str):
