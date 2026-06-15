@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=40&pause=1000&color=006400&center=true&vCenter=true&width=800&height=80&lines=Welcome+to+🌾Krishi-Mitra;Multi-Agent+Agricultural+System;Real-time+Farming+Advisories;Deterministic+State+Orchestration" alt="Welcome to Krishi-Mitra!" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=38&pause=1000&color=006400&center=true&vCenter=true&width=900&height=80&lines=Welcome+to+%F0%9F%8C%BE+Krishi-Mitra;Multi-Agent+Agricultural+System;Real-time+Farming+Advisories;Deterministic+State+Orchestration" alt="Welcome to Krishi-Mitra!" />
 </a>
 
 <i>An advanced AI-driven hub-and-spoke multi-agent system delivering fault-tolerant agricultural intelligence.</i>
