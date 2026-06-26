@@ -195,6 +195,7 @@ with st.sidebar:
     if st.button("🔄 Reset Session", use_container_width=True):
         st.session_state.messages = []
         st.session_state.trace_logs = []
+        st.session_state.session_id = str(datetime.now().timestamp())
         st.rerun()
 
 # ==========================================

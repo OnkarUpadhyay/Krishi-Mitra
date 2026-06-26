@@ -10,6 +10,7 @@ from langchain_groq import ChatGroq
 from langchain.agents import create_agent
 from langgraph.graph import StateGraph, START, END
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langgraph.checkpoint.memory import MemorySaver # ADD MEMORYSAVER
 
 from src.tools.Bhoomi_tools import bhoomi_tools_list
 from src.tools.Mausam_tools import mausam_tools_list
@@ -212,24 +213,24 @@ supervisor_prompt = ChatPromptTemplate.from_messages([
 def supervisor_node(state: KrishiMitraState):
     messages = state["messages"]
     
-    # 1. LIST OF ALL WORKERS
     valid_workers = [
         "Bhoomi", "Mausam", "Beej", "Yojana", "Fasal", 
         "Keet", "Sinchai", "Pashupalan", "Rin", "SupplyChain"
     ]
     
-    # 2. THE PROGRAMMATIC SHORT-CIRCUIT (The Loop Breaker)
-    # Check if there are messages, and look at who sent the very last message
     if messages:
         last_message = messages[-1]
         
-        # Check if the last message came from one of your specialized worker agents
-        # (LangChain agents inject their agent name into the message context or name attribute)
-        last_sender = getattr(last_message, "name", None) or state.get("sender")
-        
-        if last_sender in valid_workers:
-            # A worker just spoke! Halt the graph instantly and wait for the farmer's response.
-            return {"next": "FINISH"}
+        # NEW LOGIC: Check if the human just replied.
+        # BaseMessage objects have a 'type' attribute (e.g., 'human', 'ai', 'tool')
+        if last_message.type == "human":
+            # The user just provided missing info. Skip the loop breaker and let the LLM route!
+            pass 
+        else:
+            # The last message was NOT human. Check if we need to break the loop.
+            last_sender = getattr(last_message, "name", None) or state.get("sender")
+            if last_sender in valid_workers:
+                return {"next": "FINISH"}
 
     # 3. OTHERWISE, RUN THE LLM TO ROUTE NEW USER INPUT
     def invoke_supervisor(llm):
@@ -289,5 +290,8 @@ builder.add_conditional_edges(
 # Set the entry point to the Supervisor
 builder.add_edge(START, "Supervisor")
 
+# Initialize the memory saver
+memory = MemorySaver()
+
 # Compile into the final LangGraph application
-app = builder.compile()
+app = builder.compile(checkpointer=memory)
