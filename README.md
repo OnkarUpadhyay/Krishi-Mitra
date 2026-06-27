@@ -95,15 +95,6 @@ Krishi-Mitra employs a decentralized fleet of expert worker nodes, each strictly
 </details>
 
 <details>
-<summary><b>⚖️ Mandi (Market Intelligence)</b></summary>
-<br>
-
-* **Focus:** Fetches real-time prices from APMC markets.
-* **Key Tools:** 
-  * `agmarknet_price_scraper()`: Retrieves daily crop pricing via Agmarknet dynamic search.
-</details>
-
-<details>
 <summary><b>⛈️ Mausam (Weather & Climate Alerts)</b></summary>
 <br>
 
